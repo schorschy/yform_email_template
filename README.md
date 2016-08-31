@@ -10,6 +10,14 @@ Das in CampaignMonitor entworfene Tempalte befüllen wir mit Platzhalter-Text an
 
 Zusätzlich fügen wir für das Logo in der Kopfzeile der Mail einen Platzhalter anstelle der von CampaignMonitor vorgesehenen URL ein, vgl. mit der [HTML-Vorlage](template_allgemein.html).
 
+Aus Campaign Monitor entfernt werden muss das Tracking-Bild am Ende des HTML-Codes. Außerdem zu ersetzen:
+* `=3D` in `=`
+* `=20` in ` `
+* `=$\n` (regex) in `` (ohne Text)
+* src-Pfad des Logos im IMG-Tag ersetzen durch eine URL auf dem Webserver, ggf. auch bei den Social Icons
+* href-Pfad des Logo-Ankers ersetzen durch die URL zur Website
+* "Einstellungen bearbeiten"-Link und "Abmelden"-Link entfernen, indem `<div class="... email-footer"...>` gelöscht wird.
+
 Der E-Mail-HTML-Code wird dann in Redaxo als Template angelegt.
 
 ## Konfiguration des YForm-Formulars im Table Manager
