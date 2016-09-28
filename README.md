@@ -45,8 +45,8 @@ text|email|E-Mail-Adresse|
 validate|email|email|Bitte geben Sie eine gültige E-Mail-Adresse an.|
 textarea|message|Nachricht|
 
-action|tpl2email|contact_de||welcome@domain.de
-action|tpl2email|contact_de_confirm||welcome@domain.de
+action|tpl2email|contact_de||kunde@domain.de
+action|tpl2email|contact_de_confirm|email|
 action|db|rex_yf_messages|
 ```
 
@@ -54,7 +54,7 @@ action|db|rex_yf_messages|
 
 Wir legen 2 Profile pro Sprache an:
 
-* `contact_de` = Mail, die an den Betreiber geht
+* `contact_de` = Mail, die an die Mail-Adresse des Website-Betreiber geht
 * `contact_de_confirm` = Mail, die an den Verfasser geht
 
 Im BODY (HTML) holen wir uns das E-Mail-Template, befüllen die Platzhalter im Template mit den Variablen des Formulars und zusätzlichen Angaben.
